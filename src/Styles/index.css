@@ -1,0 +1,176 @@
+body{
+  background: url(/src/assets/HK-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  font-family: Arial, Helvetica, sans-serif;
+  
+  margin: 0;
+  padding: 0;
+}
+
+.app-container{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 100vh;
+  width: 100%;
+  
+}
+
+.app-display{
+  background-color: lightyellow;
+
+  width: 65%;
+  height: 85vh;
+  border: 5px solid black;
+  border-radius: 30px;
+  
+  position: relative;
+  
+
+  }
+
+.side-bar{
+  background-color: whitesmoke;
+  /* background-color: lightgreen; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  border-top-left-radius: 23px;
+  border-bottom-left-radius: 23px;
+  border-right: 1px solid lightgray;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.add-note-button{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: rgb(66, 66, 66);
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  border: none;
+  margin-top: 80px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.color-button{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.color1{
+  background-color: #ff6161;
+  border: 1px solid #ff6161;
+}
+
+.color2{
+  background-color: lightpink;
+  border: 1px solid lightpink;
+}
+
+.color3{
+  background-color: rgb(189, 141, 255);
+  border: 1px solid rgb(189, 141, 255);
+}
+
+.color4{ 
+  background-color: rgb(123, 231, 255);
+  border: 1px solid rgb(123, 231, 235);
+}
+
+.color5{
+  background-color: rgb(151, 255, 168);
+  border: 1px solid rgb(151, 255, 168);
+}
+
+
+
+.search-bar{
+  background-color: lightgray;
+  margin-left: 120px;
+  border-top-right-radius: 23px;
+  padding: 6px;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.note-section{
+  /* background-color: lightcoral; */
+  margin-left: 120px;
+  height: 614.5px;
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+}
+
+.note-section-header{
+  margin: 0;
+  padding: 50px 40px 10px 50px;
+}
+
+.note-box-display{
+  /* background-color: blue; */
+  display: flex;
+  flex-wrap: wrap;
+  height: 517.5px;
+  overflow-y: auto;
+  border-bottom-right-radius: 23px;
+}
+
+.note-box-display::-webkit-scrollbar{
+  width: 5px;
+}
+
+.note-box-display::-webkit-scrollbar-thumb{
+  background-color: rgb(226, 147, 254);
+  height: 50px;
+  cursor: grabbing;
+}
+
+.note-box{
+  background-color: lightblue;
+  height: 220px;
+  width: 220px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-left: 40px;
+  border-radius: 12px;
+  padding: 0;
+  display: hidden;
+  position: relative;
+}
+
+.note-input{
+  margin-top: 19px;
+  margin-left: 20px;
+  border: none;
+  outline: none;
+  resize: none;
+  height: 160px;
+  width: 160px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.delete-button{
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
