@@ -30,13 +30,10 @@ function NoteManagementApp() {
     setNotes(updatedNotes); // Update the specific note's value
   }
 
-
-  // Log the color whenever it changes
-  // useEffect(() => {
-  //   console.log(color)
-  //   document.getElementById("noteBox").style.backgroundColor = color;
-  //   document.getElementById("noteInput").style.backgroundColor = color;
-  // },[addNote]);
+  const handleDeleteButton = (index) => {
+    const updatedNotes = notes.filter((element, i) => i !== index)
+    setNotes(updatedNotes)
+  }  
 
   return (
     <>
@@ -76,6 +73,7 @@ function NoteManagementApp() {
                   key={index}
                   value={note.value}
                   onChange={(e) => handleNoteChange(index, e.target.value)}
+                  onClick={(e) => handleDeleteButton(index)}
                   color={note.color}
                 />
               ))}

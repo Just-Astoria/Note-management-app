@@ -1,13 +1,15 @@
 import React from "react";
+// import { FontAwesomeIcon } from 'react-fontawesome';
+{/* <FontAwesomeIcon icon="fa-solid fa-trash"></FontAwesomeIcon> */}
 // import Props from 'prop-types'
 import NoteManagementApp from "./NoteManagementApp";
 
-const Note = ({ value, onChange, color}) => {
+const Note = ({ value, onClick, onChange, color}) => {
 
   // const backgroundColor = props.color;
   return (
     <div id="noteBox" className="note-box" style={{ backgroundColor: color}}>
-      <button className="delete-button"></button>
+      <button onClick={onClick} className="delete-button">x</button>
       <textarea
         value={value}
         onChange={onChange}
