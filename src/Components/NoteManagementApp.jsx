@@ -58,6 +58,9 @@ function NoteManagementApp() {
                 <div>
                   <button onClick={addNote} className="color-button color5" ></button>
                 </div>
+                <div>
+                  <button onClick={addNote} className="color-button color6" ></button>
+                </div>
               </ul>
             </div>
           </div>

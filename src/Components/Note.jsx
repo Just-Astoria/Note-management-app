@@ -1,7 +1,6 @@
 import React from "react";
-// import { FontAwesomeIcon } from 'react-fontawesome';
-{/* <FontAwesomeIcon icon="fa-solid fa-trash"></FontAwesomeIcon> */}
-// import Props from 'prop-types'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import NoteManagementApp from "./NoteManagementApp";
 
 const Note = ({ value, onClick, onChange, color}) => {
@@ -9,7 +8,7 @@ const Note = ({ value, onClick, onChange, color}) => {
   // const backgroundColor = props.color;
   return (
     <div id="noteBox" className="note-box" style={{ backgroundColor: color}}>
-      <button onClick={onClick} className="delete-button">x</button>
+      <button onClick={onClick} className="delete-button"><FontAwesomeIcon className="trash-icon" icon={faTrash} /></button>
       <textarea
         value={value}
         onChange={onChange}
