@@ -1,0 +1,106 @@
+
+$primary-color: #edecfa;
+$secondary-color: #ffffff;
+$search-background: #908ae0;
+
+$expanded-width: 300px;
+
+body {
+  padding: 0;
+  margin: 0;
+  header {
+    width: 100%;
+    height: 150px;
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+
+    #top_element {
+      height: 60%;
+      background-color: $primary-color;
+    }
+
+    #main_search_element {
+      height: 40%;
+      background-color: $secondary-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      #search_icon_circle {
+        width: 100px;
+        height: 100px;
+        background: $secondary-color;
+        display: block;
+        border-radius: 100px / 100px;
+        position: relative;
+        top: -22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease-in;
+
+        #search_icon_background {
+          width: 40px;
+          height: 40px;
+          background-color: $search-background;
+          box-shadow: 10px 10px 20px 0px #d7d3f3;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100px / 100px;
+          position: relative;
+          top: -15px;
+          cursor: pointer;
+          transition: all 0.4s ease-in;
+          .fa {
+            color: $secondary-color;
+            left: 2px;
+            position: relative;
+          }
+
+          .times-icon {
+            display: none;
+          }
+
+          input {
+            transition: all 0.4s ease-in;
+            opacity: 0;
+            width: 0;
+            background: $search-background;
+            border: none;
+            outline: none;
+            color: #fff;
+          }
+        }
+      }
+
+      &.expand {
+        #search_icon_circle {
+          border-radius: 20px;
+          width: $expanded-width;
+
+          #search_icon_background {
+            width: $expanded-width - 40px;
+            border-radius: 10px;
+            padding-left: 8px;
+            padding-right: 8px;
+            .times-icon {
+              display: block;
+            }
+            input {
+              visibility: visible;
+              display: block;
+              width: $expanded-width - 80px;
+              opacity: 1;
+              padding-left: 10px;
+
+              outline: none;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

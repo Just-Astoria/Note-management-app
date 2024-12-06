@@ -1,4 +1,3 @@
-import './App.css'
 import NoteManagementApp from './Components/NoteManagementApp'
 
 function App() {

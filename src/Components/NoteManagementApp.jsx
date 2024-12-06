@@ -1,6 +1,7 @@
 //بسم الله الرحمان الرحیم
 import React, { useState, useEffect } from "react";
 import Note from "./Note";
+import SearchBar from "./SearchBar";
 
 function NoteManagementApp() {
   const [notes, setNotes] = useState([
@@ -64,7 +65,9 @@ function NoteManagementApp() {
               </ul>
             </div>
           </div>
-          <div className="search-bar">Search Bar</div>
+          <div className="search-bar">
+            <SearchBar />
+          </div>
           <div className="note-section">
             <div>
               <h1 className="note-section-header">Notes</h1>
