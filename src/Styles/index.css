@@ -15,6 +15,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  vertical-align: middle;
   
   height: 100vh;
   width: 100%;
@@ -26,12 +27,13 @@ body{
 
   width: 65%;
   height: 85vh;
+  min-height: 415px;
+  min-width: 920px;
   border: 5px solid black;
   border-radius: 20px;
   
   position: relative;
-
-  }
+}
 
 .side-bar{
   background-color: white;
@@ -105,10 +107,9 @@ body{
 
 
 .search-bar{
-  background-color: lightgray;
   margin-left: 120px;
-  border-top-right-radius: 23px;
-  padding: 6px;
+  border-top-right-radius: 12px;
+  border-left: 1px solid lightgray;
   position: absolute;
   right: 0;
   left: 0;
@@ -122,16 +123,12 @@ body{
   border-bottom-right-radius: 23px;
 }
 
-.note-section-header{
-  margin: 0;
-  padding: 50px 40px 10px 50px;
-}
-
 .note-box-display{
   /* background-color: blue; */
   display: flex;
   flex-wrap: wrap;
-  height: 508px;
+  height: 69vh;
+  min-height: 330px;
   overflow-y: auto;
   border-bottom-right-radius: 23px;
 }
@@ -151,9 +148,9 @@ body{
   background-color: lightblue;
   height: 220px;
   width: 220px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: 20px;
-  margin-left: 40px;
+  margin-left: 37px;
   border-radius: 12px;
   padding: 0;
   display: hidden;
@@ -201,4 +198,53 @@ body{
   height: 160px;
   width: 160px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media(min-width: 500px) and (max-width: 710px){
+  .app-display{
+    min-width: 420px;
+  }
+  .note-box{
+    margin-left: 47px;
+  }
+}
+
+@media(min-width: 710px) and (max-width: 1070px){
+  .app-display{
+    min-width: 660px;
+  }
+}
+
+@media(min-width: 1071px) and (max-width: 1150px){
+  .app-display{
+    min-width: 920px;
+  }
+}
+
+@media(min-height: 1px) and (max-height: 150px){
+  .app-container{
+    margin-top: 155px;
+  }
+}
+
+@media(min-height: 151px) and (max-height: 250px){
+  .app-container{
+    margin-top: 15%;
+  }
+}
+@media(min-height: 251px) and (max-height: 300px){
+  .app-container{
+    margin-top: 10%;
+  }
+}
+
+@media(min-height: 301px) and (max-height: 350px){
+  .app-container{
+    margin-top: 7%;
+  }
+}
+@media(min-height: 351px) and (max-height: 430px){
+  .app-container{
+    margin-top: 5%;
+  }
 }
